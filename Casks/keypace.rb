@@ -1,12 +1,14 @@
 cask "keypace" do
-  version "0.2"
-  sha256 "3eccc31e9bdc9e917afca6157eab983a27c3c4b897965485f0f62d092c036571"
+  version "0.3"
+  sha256 "97ef9df9bb998e6efb9fc8395a9d49ba0da493b41f11ef9e751a989f7d98c945"
 
   url "https://github.com/sanvithreddyy/keypace/releases/download/v#{version}/Keypace-#{version}.dmg"
   name "Keypace"
   desc "Menu-bar typing speed tracker"
   homepage "https://github.com/sanvithreddyy/keypace"
 
+  # Keypace updates itself from 0.3 on; brew upgrade leaves it to the app.
+  auto_updates true
   depends_on macos: :sequoia
 
   app "Keypace.app"
